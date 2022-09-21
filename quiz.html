@@ -1,0 +1,84 @@
+<html>
+    <head>
+        <title> Formulir</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body align="center">
+        <h1> Formulir Pendaftaran</h1>
+        <h2>Pekan Olahraga dan Seni Guru TKA/TPA</h2>
+        <h2>Tahun 2020</h2>
+        <table cellsspacing="2" align="center" cellpading="8" border="0">
+            <tr><td> NAMA PESERTA</td>
+                <td><input type="text" placeholder="Masukkan nama" id="n1"></td></tr>
+            <tr><td> TEMPAT TANGGAL LAHIR</td>
+                <td><input type="text" placeholder="Masukan tempat tanggal lahir" id="ttl1"></td></tr>
+            <tr><td> UTUSAN UNIT TKA/TPA</td>
+                <td><input type="text" placeholder="Masukan nama unit" id="u1"></td></tr>
+            <tr><td> KELURAHAN/DESA</td>
+                <td><input type="text" placeholder="Masukkan nama kelurahan/desa" id="kd1"></td></tr>
+            <tr><td> KECAMATAN</td>
+                <td><input type="text" placeholder="Masukkan nama kecamatan" id="k1"></td></tr>
+            <tr><td> NOMOR TELEPON</td>
+                <td><input type="number" placeholder="Masukkan nomor telepon" id="t1"></td></tr>
+            <tr><td> JENIS LOMBA</td>
+                <td><ol>
+                    <li>Tarik Tammbang (4 Perempuan + 1 Laki = 5 orang)</li>
+                    <li>Lari Estafer (4 Perempuan)</li>
+                    <li>Gobak Sodor (4 Perempuan)</li>
+                    <li>Tartil (1 orang perwakilan TKA/TPA)</li>
+                    <li>Ceramah (1 orang perwakilan TKA/TPA)</li>
+                </ol></td></tr>
+            <tr><td><p><i>Ket: Lingkari jenis lomba yang dipilih</i></p></td>
+            </tr>
+            <tr><td></td>
+                <td><p align="right"> Sangatta, ....... </p> </td>
+            </tr>
+            <tr></tr>
+            <tr><td><p>Kepala Unit TKA/TPA</p></td>
+                <td><p align="right">Peserta Lomba</p></td>
+            </tr>
+            <tr>
+                <td><p></p></td>
+            </tr>
+            <tr>
+                <td><p></p></td>
+            </tr>
+            <tr>
+                <td>_ _ _ _ _ _ _ _</td>
+                <td><p align="right">_ _ _ _ _ _ _ _</p></td>
+            </tr>
+
+        </table>
+            <script type="text/javascript">
+                function create_account(){
+                    var n=document.getElementById("n1").value;
+                    var ttl=document.getElementById("ttl1").value;
+                    var u=document.getElementById("u1").value;
+                    var kd=document.getElementById("kd1").value;
+                    var k=document.getElementById("k1").value;
+                    var t=document.getElementById("t1").value;
+                    //Code for password validation
+                    var letters = /^[A-Za-z]+$/;
+                    var both = /^[a-zA-Z0-9]+$/;
+                    var number = /^[0-9]+$/;    
+                    //other validations required code
+                    if(n==''||ttl==''||u==''||kd==''||k==''||t==''){
+                        alert("Enter each details correctly");
+                    }
+                    else if(!letters.test(n||u||kd||k))
+                    {
+                        alert('Input is incorrect must contain alphabets only');
+                    }
+                    else if (!number.test(t))
+                    {
+                        alert('Input is incorrect must contain numbers only');
+                    }
+                    else if (!both.test(ttl))
+                    {
+                        alert('Input is incorrect');
+                    }
+                    
+                }
+            </script>
+    </body>
+</html>
